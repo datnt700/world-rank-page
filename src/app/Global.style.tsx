@@ -15,7 +15,7 @@ export const GlobalStyles = () => (
       body {
         font-family: 'Be Vietnam Pro', sans-serif;
         font-style: normal;
-        background-color: #282b30;
+        background-color: #1b1d1f;
       }
     `}
   />
