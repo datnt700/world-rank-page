@@ -20,3 +20,10 @@ export const GlobalStyles = () => (
     `}
   />
 );
+
+export const colors = {
+  gray: '#6C727F',
+  grayLight: '#D2D5DA',
+  darkLight: '#282B30',
+  dark: '#1B1D1F',
+};

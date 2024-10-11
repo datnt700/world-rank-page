@@ -19,7 +19,7 @@ export const MainContent = () => {
       const filterArray = country.filter((item) => {
         return item.name.common == name;
       });
-      console.log('ss', filterArray);
+      setCountry(filterArray);
     }
   }, [country, name]);
 

@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 
+import { colors } from '@/app/styles/Global.style';
+
 export const inputSearchCss = {
   searchContainer: css({
     display: 'flex',
@@ -23,10 +25,10 @@ export const inputSearchCss = {
     borderRadius: '0.75rem',
     width: '100%',
     outline: 'none',
-    color: '#6C727F',
+    color: colors.gray,
     backgroundColor: '#282b30',
     '::placeholder': {
-      color: '#6C727F',
+      color: colors.gray,
       fontSize: '0.875rem',
     },
   }),

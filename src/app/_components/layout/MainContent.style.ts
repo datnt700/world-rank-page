@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 
+import { colors } from '@/app/styles/Global.style';
 export const mainContentStyle = {
   container: css({
     position: 'relative',
@@ -10,7 +11,7 @@ export const mainContentStyle = {
   }),
   wrapper: css({
     border: '1px solid #282B30',
-    backgroundColor: '#1B1D1F',
+    backgroundColor: colors.dark,
     padding: '1.6rem 2rem',
     borderRadius: '0.75rem',
   }),
@@ -19,7 +20,7 @@ export const mainContentStyle = {
     justifyContent: 'space-between',
     alignItems: 'center',
     p: {
-      color: '#6C727F',
+      color: colors.grayLight,
       fontSize: '1rem',
     },
   }),
