@@ -5,4 +5,10 @@ export interface Name {
 
 export interface Country {
   name: Name;
+  region: string;
+  independent: boolean;
+  unMember: boolean;
+  flags: { png: string; svg: string };
+  population: number;
+  area: number;
 }
