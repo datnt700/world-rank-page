@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 
+import { colors } from '../../styles/Global.style';
 export const checkboxStyle = {
   container: css({
     display: 'flex',
@@ -46,7 +47,7 @@ export const checkboxStyle = {
     width: '25px',
     backgroundColor: 'transparent',
     borderRadius: '0.15rem',
-    border: '1px solid #6C727F',
+    border: `1px solid ${colors.gray}`,
 
     '&:after': {
       content: '""',

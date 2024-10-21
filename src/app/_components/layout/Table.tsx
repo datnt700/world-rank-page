@@ -1,14 +1,14 @@
 /** @jsxImportSource @emotion/react */
+import Image from 'next/image';
+
 import { tableStyle } from '@/app/_components/layout/Table.style';
 import { Country } from '@/app/type/Country';
-import Image from 'next/image';
 
 interface TableProps {
   data: Country[];
 }
 
 export const Table = ({ data }: TableProps) => {
-  console.log('Table', data);
   return (
     <div css={tableStyle.container}>
       <table css={tableStyle.table}>

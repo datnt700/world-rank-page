@@ -7,10 +7,10 @@ import { Tap } from '@/app/type/Type';
 
 interface TabProps {
   tabs: Tap[];
-  tapChecked: string[];
+  activeTab: string[];
 }
 
-export const Tab = ({ tabs, tapChecked }: TabProps) => {
+export const Tab = ({ tabs, activeTab }: TabProps) => {
   return (
     <div css={tabStyle.tabs}>
       <ul css={tabStyle.tabList}>
@@ -20,7 +20,7 @@ export const Tab = ({ tabs, tapChecked }: TabProps) => {
               onClick={tab.onClick}
               css={[
                 tabStyle.tab,
-                tapChecked.includes(tab.id) && tabStyle.active,
+                activeTab.includes(tab.id) && tabStyle.active,
               ]}
               data-testid="item-tab"
             >

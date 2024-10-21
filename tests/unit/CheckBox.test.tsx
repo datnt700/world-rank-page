@@ -11,7 +11,7 @@ describe('Checkbox Component', () => {
     render(
       <Checkbox
         name={'Independent'}
-        activeCheckbox={false}
+        isChecked={false}
         handleChecked={mockHandleChecked}
       />
     );

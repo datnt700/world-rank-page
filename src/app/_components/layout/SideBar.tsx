@@ -1,16 +1,15 @@
 /** @jsxImportSource @emotion/react */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { DropList } from '../common/DropList';
 
 import { sideBarStyle } from '@/app/_components/layout/SideBar.style';
 import { Tab } from '@/app/_components/common/Tab';
-import { Country } from '@/app/type/Country';
 import { Checkbox } from '@/app/_components/common/Checkbox';
 
 interface SideBarProps {
-  tabChecked: string[];
-  setTabChecked: (e: string[]) => void;
+  activeTab: string[];
+  setActiveTab: (e: string[]) => void;
   setStatus: (e: { id: number; name: string; status: boolean }[]) => void;
   status: { id: number; name: string; status: boolean }[];
   activeList: boolean;
@@ -20,8 +19,8 @@ interface SideBarProps {
 }
 
 export const SideBar = ({
-  tabChecked,
-  setTabChecked,
+  activeTab,
+  setActiveTab,
   status,
   setStatus,
   activeList,
@@ -78,11 +77,11 @@ export const SideBar = ({
   ];
 
   const handleTabClick = (tapId: string) => {
-    if (tabChecked.includes(tapId)) {
-      const filters = tabChecked.filter((el) => el !== tapId);
-      setTabChecked(filters);
+    if (activeTab.includes(tapId)) {
+      const filters = activeTab.filter((el) => el !== tapId);
+      setActiveTab(filters);
     } else {
-      setTabChecked([...tabChecked, tapId]);
+      setActiveTab([...activeTab, tapId]);
     }
   };
 
@@ -115,15 +114,15 @@ export const SideBar = ({
         </div>
         <div css={sideBarStyle.content}>
           <p>Region</p>
-          <Tab tabs={tabs} tapChecked={tabChecked} />
+          <Tab tabs={tabs} activeTab={activeTab} />
         </div>
         <div css={sideBarStyle.content}>
           <p>Status</p>
           {status.map((item) => (
             <Checkbox
               key={item.id}
-              name={item.name}
-              activeCheckbox={item.status}
+              label={item.name}
+              isChecked={item.status}
               handleChecked={handleChecked}
             />
           ))}

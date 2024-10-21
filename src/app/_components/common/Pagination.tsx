@@ -4,21 +4,21 @@ import React from 'react';
 import { paginationStyle } from './Pagination.style';
 
 interface PaginationProps {
-  postsPerPage: number;
-  length: number;
+  itemsPerPage: number;
+  totalItems: number;
   currentPage: number;
-  handlePagination: (e: number) => void;
+  handleChange: (e: number) => void;
 }
 
 export const Pagination = ({
-  postsPerPage,
-  length,
-  handlePagination,
+  itemsPerPage,
+  totalItems,
+  handleChange,
   currentPage,
 }: PaginationProps) => {
   const paginationNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(length / postsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     paginationNumbers.push(i);
   }
   return (
@@ -30,7 +30,7 @@ export const Pagination = ({
             paginationStyle.pageNumber,
             currentPage === pageNumber ? paginationStyle.active : '',
           ]}
-          onClick={() => handlePagination(pageNumber)}
+          onClick={() => handleChange(pageNumber)}
         >
           {pageNumber}
         </button>

@@ -12,7 +12,7 @@ import { Pagination } from '@/app/_components/common/Pagination';
 export const MainContent = () => {
   const [name, setName] = useState('');
   const [country, setCountry] = useState<Country[]>([]);
-  const [tabChecked, setTabChecked] = useState<string[]>([]);
+  const [activeTab, setActiveTab] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
   const [activeList, setActiveList] = useState(false);
@@ -77,7 +77,7 @@ export const MainContent = () => {
   const applyFilters = () => {
     let filteredData = data || [];
     filteredData = filterByName(filteredData, name);
-    filteredData = filterByRegion(filteredData, tabChecked);
+    filteredData = filterByRegion(filteredData, activeTab);
     filteredData = filterByStatus(filteredData, status);
     filteredData = sortData(filteredData, option);
     setCountry(filteredData);
@@ -87,8 +87,8 @@ export const MainContent = () => {
     if (data) {
       applyFilters();
     }
-  }, [data, name, tabChecked, status, option]);
-  const handlePagination = (pageNumber: number) => {
+  }, [data, name, activeTab, status, option]);
+  const handleChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
 
@@ -102,8 +102,8 @@ export const MainContent = () => {
               <InputSearch setName={setName} />
             </div>
             <SideBar
-              tabChecked={tabChecked}
-              setTabChecked={setTabChecked}
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
               status={status}
               activeList={activeList}
               setStatus={setStatus}
@@ -119,9 +119,9 @@ export const MainContent = () => {
               <p style={{ color: 'white' }}>No data available</p>
             )}
             <Pagination
-              postsPerPage={postsPerPage}
-              length={country.length}
-              handlePagination={handlePagination}
+              itemsPerPage={postsPerPage}
+              totalItems={country.length}
+              handleChange={handleChange}
               currentPage={currentPage}
             />
           </div>

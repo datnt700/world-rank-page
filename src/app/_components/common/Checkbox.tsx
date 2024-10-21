@@ -4,23 +4,23 @@ import React from 'react';
 import { checkboxStyle } from './Checkbox.style';
 
 interface CheckBoxProps {
-  name: string;
-  activeCheckbox: boolean;
-  handleChecked: (e: string) => void;
+  label: string;
+  isChecked: boolean;
+  handleChecked: (label: string) => void;
 }
 
 export const Checkbox = ({
-  name,
-  activeCheckbox,
+  label,
+  isChecked,
   handleChecked,
 }: CheckBoxProps) => {
   return (
     <label css={checkboxStyle.container}>
-      {name}
+      {label}
       <input
         type="checkbox"
-        checked={activeCheckbox}
-        onChange={() => handleChecked(name)}
+        checked={isChecked}
+        onChange={() => handleChecked(label)}
       />
       <span css={checkboxStyle.checkmark} className="checkmark"></span>
     </label>

@@ -1,10 +1,11 @@
 import { css } from '@emotion/react';
 
+import { colors } from '../../styles/Global.style';
 export const dropListStyle = {
   container: css({
-    border: '1px solid #282B30',
+    border: `1px solid ${colors.darkLight}`,
     fontSize: '0.875rem',
-    color: '#4D5562',
+    color: colors.blue,
     fontWeight: 800,
     position: 'relative',
     borderRadius: '0.75rem',

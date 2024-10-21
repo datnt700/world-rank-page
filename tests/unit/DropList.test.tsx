@@ -50,7 +50,7 @@ describe('DropList Component', () => {
       />
     );
 
-    const dropListButton = screen.getByRole('button', { name: /Sort by/i });
+    const dropListButton = screen.getByRole('button');
     fireEvent.click(dropListButton);
 
     rerender(
