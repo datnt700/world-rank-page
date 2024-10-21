@@ -10,10 +10,10 @@ describe('should call handlePagination when the pagination is clicked', () => {
     const currentPage = 1;
     render(
       <Pagination
-        postsPerPage={10}
-        length={250}
+        itemsPerPage={10}
+        totalItems={250}
         currentPage={currentPage}
-        handlePagination={mockHandlePagination}
+        handleChange={mockHandlePagination}
       />
     );
     const paginationButtons = screen.getAllByRole('button');

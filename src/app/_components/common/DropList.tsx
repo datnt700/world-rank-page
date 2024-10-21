@@ -4,10 +4,7 @@ import React from 'react';
 
 import { dropListStyle } from './DropList.style';
 
-interface OptionList {
-  id: string;
-  option: string;
-}
+import { OptionList } from '@/app/type/Type';
 
 interface DropListProps {
   handleOpenList: () => void;

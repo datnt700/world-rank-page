@@ -3,3 +3,8 @@ export interface Tap {
   id: string;
   onClick: () => void;
 }
+
+export interface OptionList {
+  id: string;
+  option: string;
+}

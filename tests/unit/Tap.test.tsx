@@ -13,14 +13,14 @@ describe('Tab Component', () => {
     { id: '3', label: 'Tab 3', onClick: vi.fn() },
   ];
   it('renders the correct number of tabs', () => {
-    render(<Tab tabs={tabs} tapChecked={[]} />);
+    render(<Tab tabs={tabs} activeTab={[]} />);
 
     const tabButtons = screen.getAllByTestId('item-tab');
     expect(tabButtons).toHaveLength(tabs.length);
   });
 
   it('calls onClick when a tab is clicked', () => {
-    render(<Tab tabs={tabs} tapChecked={[]} />);
+    render(<Tab tabs={tabs} activeTab={[]} />);
 
     const firstTab = screen.getByText('Tab 1');
     fireEvent.click(firstTab);

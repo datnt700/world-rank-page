@@ -10,7 +10,7 @@ describe('Checkbox Component', () => {
     const mockName = 'Independent';
     render(
       <Checkbox
-        name={'Independent'}
+        label={'Independent'}
         isChecked={false}
         handleChecked={mockHandleChecked}
       />
