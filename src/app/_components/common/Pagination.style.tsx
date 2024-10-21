@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 
+import { colors } from '@/app/styles/Global.style';
+
 export const paginationStyle = {
   pagination: css({
     display: 'flex',
@@ -13,7 +15,7 @@ export const paginationStyle = {
   pageNumber: css({}),
   active: css({
     background: 'black',
-    color: '#fff',
+    color: colors.white,
     border: '1px solid #fff',
   }),
 };

@@ -26,7 +26,7 @@ export const inputSearchCss = {
     width: '100%',
     outline: 'none',
     color: colors.gray,
-    backgroundColor: '#282b30',
+    backgroundColor: colors.darkLight,
     '::placeholder': {
       color: colors.gray,
       fontSize: '0.875rem',

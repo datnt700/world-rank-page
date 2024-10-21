@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 
+import { colors } from '@/app/styles/Global.style';
+
 export const sideBarStyle = {
   container: css({
     marginTop: '2rem',
@@ -13,7 +15,7 @@ export const sideBarStyle = {
     flexDirection: 'column',
     gap: '1rem',
     p: {
-      color: '#6C727F',
+      color: colors.gray,
       fontSize: '0.75rem',
     },
   }),

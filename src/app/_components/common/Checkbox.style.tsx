@@ -11,7 +11,7 @@ export const checkboxStyle = {
     cursor: 'pointer',
     fontSize: ' 1rem',
     userSelect: 'none',
-    color: '#D2D5DA',
+    color: colors.grayLight,
 
     input: {
       position: 'absolute',
@@ -21,7 +21,7 @@ export const checkboxStyle = {
       width: 0,
 
       '&:checked ~ .checkmark': {
-        backgroundColor: '#2196F3',
+        backgroundColor: colors.blue,
       },
 
       '&:checked ~ .checkmark:after': {

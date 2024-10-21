@@ -18,7 +18,7 @@ export const dropListStyle = {
   }),
   btn: css({
     fontSize: '0.875rem',
-    color: '#4D5562',
+    color: colors.grayDark,
     padding: '0.7rem 1rem',
     display: 'flex',
     alignItems: 'center',
@@ -31,8 +31,8 @@ export const dropListStyle = {
       padding: '1.2rem 0 1.2rem 1.6rem',
     },
     '&.activeList': {
-      backgroundColor: '#4D5562',
-      color: '#F9FAFB',
+      backgroundColor: colors.grayDark,
+      color: colors.white,
     },
     span: {
       fontWeight: 'bold',
@@ -43,7 +43,7 @@ export const dropListStyle = {
     border: '1px solid #4D5562',
     borderRadius: '0.5rem',
     position: 'absolute',
-    backgroundColor: '#394150',
+    backgroundColor: colors.grayDark,
     display: 'none',
     top: '90px',
     left: '50%',
@@ -59,14 +59,14 @@ export const dropListStyle = {
         button: {
           border: 'none',
           backgroundColor: 'transparent',
-          color: '#F9FAFB',
+          color: colors.white,
           cursor: 'pointer',
           width: '100%',
           padding: '0 2rem',
         },
 
         '&:hover': {
-          backgroundColor: '#7CA9F3',
+          backgroundColor: colors.blue,
           borderTopLeftRadius: '0.5rem',
           borderTopRightRadius: '0.5rem',
         },

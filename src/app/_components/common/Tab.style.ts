@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 
+import { colors } from '../../styles/Global.style';
 export const tabStyle = {
   tabs: css({
     width: '100%',
@@ -20,12 +21,12 @@ export const tabStyle = {
     borderRadius: '0.6rem',
     outline: 'none',
     backgroundColor: 'transparent',
-    color: '#6C727F',
+    color: colors.gray,
     fontSize: ' 0.75rem',
     cursor: 'pointer',
   }),
   active: css({
     backgroundColor: '#6f757c',
-    color: '#D2D5DA',
+    color: colors.grayLight,
   }),
 };

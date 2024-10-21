@@ -89,7 +89,7 @@ export const SideBar = ({
     setActiveList((e) => !e);
   };
 
-  const handleChecked = (e: string) => {
+  const onChange = (e: string) => {
     setStatus(
       status.map((item) =>
         item.name === e
@@ -123,7 +123,7 @@ export const SideBar = ({
               key={item.id}
               label={item.name}
               isChecked={item.status}
-              handleChecked={handleChecked}
+              onChange={onChange}
             />
           ))}
         </div>

@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 
+import { colors } from '@/app/styles/Global.style';
+
 export const tableStyle = {
   container: css({
     width: '100%',
@@ -24,11 +26,11 @@ export const tableStyle = {
     },
 
     tbody: {
-      color: '#D2D5DA',
+      color: colors.grayLight,
     },
   }),
   header: css({
-    color: '#6C727F',
+    color: colors.gray,
     textAlign: 'left',
     borderBottom: '0.5px solid #6C727F',
     fontSize: '0.75rem',
