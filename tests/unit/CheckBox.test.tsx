@@ -12,7 +12,7 @@ describe('Checkbox Component', () => {
       <Checkbox
         label={'Independent'}
         isChecked={false}
-        handleChecked={mockHandleChecked}
+        onChange={mockHandleChecked}
       />
     );
 
