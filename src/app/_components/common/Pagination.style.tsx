@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import { colors } from '@/app/styles/Global.style';
+import { colors } from '../../styles/Global.style';
 
 export const paginationStyle = {
   pagination: css({
