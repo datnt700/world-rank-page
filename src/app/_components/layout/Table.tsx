@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { tableStyle } from '@/app/_components/layout/Table.style';
 import { Country } from '@/app/type/Country';
-import Link from 'next/link';
 
 interface TableProps {
   data: Country[];
