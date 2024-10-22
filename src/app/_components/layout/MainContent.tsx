@@ -98,7 +98,7 @@ export const MainContent = () => {
         <div css={mainContentStyle.wrapper}>
           <div css={mainContentStyle.sideBar}>
             <div css={mainContentStyle.search}>
-              <p>Found 234 countries</p>
+              <p>Found {country.length} countries</p>
               <InputSearch setName={setName} />
             </div>
             <SideBar
