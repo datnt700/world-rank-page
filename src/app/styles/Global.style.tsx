@@ -2,6 +2,17 @@
 
 /** @jsxImportSource @emotion/react */
 import { Global, css } from '@emotion/react';
+
+export const colors = {
+  gray: '#6C727F',
+  grayLight: '#D2D5DA',
+  darkLight: '#282B30',
+  dark: '#141718',
+  blue: '#4E80EE',
+  grayDark: '#4D5562',
+  white: '#F9FAFB',
+};
+
 export const GlobalStyles = () => (
   <Global
     styles={css`
@@ -15,18 +26,8 @@ export const GlobalStyles = () => (
       body {
         font-family: 'Be Vietnam Pro', sans-serif;
         font-style: normal;
-        background-color: #1b1d1f;
+        background-color: ${colors.dark};
       }
     `}
   />
 );
-
-export const colors = {
-  gray: '#6C727F',
-  grayLight: '#D2D5DA',
-  darkLight: '#282B30',
-  dark: '#1B1D1F',
-  blue: '#4E80EE',
-  grayDark: '#4D5562',
-  white: '#F9FAFB',
-};
