@@ -12,10 +12,14 @@ export const paginationStyle = {
       padding: '10px',
     },
   }),
-  pageNumber: css({}),
-  active: css({
-    background: 'black',
+  pageNumber: css({
+    backgroundColor: 'transparent',
     color: colors.white,
-    border: '1px solid #fff',
+    border: 'none',
+  }),
+  active: css({
+    backgroundColor: '#6f757c',
+    color: colors.grayLight,
+    outline: 'none',
   }),
 };

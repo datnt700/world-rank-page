@@ -27,9 +27,15 @@ export const DropList = ({
         <span css={dropListStyle.btn}>
           <span>{option}</span>
           {activeList ? (
-            <Icon icon="ri:arrow-down-s-line" />
+            <Icon
+              icon="ri:arrow-down-s-line"
+              style={{ paddingRight: '0.5rem', width: '3rem', height: '1rem' }}
+            />
           ) : (
-            <Icon icon="solar:alt-arrow-up-linear" />
+            <Icon
+              icon="solar:alt-arrow-up-linear"
+              style={{ paddingRight: '0.5rem', width: '3rem', height: '1rem' }}
+            />
           )}
         </span>
       </button>
