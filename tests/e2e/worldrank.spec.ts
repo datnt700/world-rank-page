@@ -95,3 +95,19 @@ test.describe('Checkbox filtering functionality', () => {
     }
   });
 });
+
+test.describe('Country table navigation', () => {
+  test('should navigate to country page when a flag is clicked', async ({
+    page,
+  }) => {
+    await page.goto('http://localhost:3000'); // URL của trang mà bạn muốn kiểm thử
+
+    const countryLink = page.locator('tr td:first-child a');
+
+    await countryLink.first().click();
+
+    await page.waitForURL(/\/country\?id=/);
+
+    expect(page.url()).toMatch(/\/country\?id=/);
+  });
+});
